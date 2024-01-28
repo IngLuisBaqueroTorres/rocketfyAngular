@@ -1,0 +1,12 @@
+{
+  "framework": "angular",
+  "build": {
+    "target": "production",
+    "budgets": [
+      {
+        "type": "initial",
+        "maximumError": "1.5mb"
+      }
+    ]
+  }
+}
