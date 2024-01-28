@@ -1,0 +1,21 @@
+<main>
+    <div class="card">
+        <p-chart class="chart" type="line" [data]="chartDataTemperature" [options]="options" height="350"></p-chart>
+
+        <div class="operations">
+            <span>Promedio: {{averages.temperature | number:'1.2-2'}} °C</span>
+            <span>Desviación estándar: {{deviation.temperature | number:'1.2-2'}}</span>
+            <span>Tendencia: {{trend.temperature | number:'1.2-2'}}</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <p-chart class="chart" type="line" [data]="chartDataHumidity" [options]="options" height="350"></p-chart>
+
+        <div class="operations">
+            <span>Promedio: {{averages.humidity | number:'1.2-2'}}%</span>
+            <span>Desviación estándar: {{deviation.humidity | number:'1.2-2'}}</span>
+            <span>Tendencia: {{trend.humidity | number:'1.2-2'}}</span>
+        </div>
+    </div>
+</main>

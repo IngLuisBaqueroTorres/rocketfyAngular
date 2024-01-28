@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="login-container">
+        <div class="login-image">
+            <!-- <img src="assets/images/background.jpg" alt="Login image"> -->
+        </div>
+        <form [formGroup]="loginForm" class="login-form">
+            <h2>Inicia de sesión</h2>
+            <div class="input">
+                <label for="user">Usuario</label>
+                <input type="text" pInputText formControlName="user" />
+            </div>
+            <div class="input">
+                <label for="password">Contraseña</label>
+                <input type="password" pInputText formControlName="password" />
+            </div>
+            <p-button label="Ingresar" (click)="login()"></p-button>
+            <p>¿No tienes cuenta? <a routerLink="/signin">Crea una</a></p>
+        </form>
+    </div>
+</div>

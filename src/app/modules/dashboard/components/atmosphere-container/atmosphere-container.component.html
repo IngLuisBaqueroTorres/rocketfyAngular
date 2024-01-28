@@ -1,0 +1,34 @@
+<main>
+    <div class="card">
+        <p-chart class="chart" type="line" [data]="chartDataNoise" [options]="options" height="350"></p-chart>
+    
+        <div class="operations">
+            <span>Promedio: {{averages.noise_level | number:'1.2-2'}} dB</span>
+            <span>Desviación estándar: {{deviation.noise_level | number:'1.2-2'}}</span>
+            <span>Tendencia: {{trend.noise_level | number:'1.2-2'}}</span>
+        </div>
+    </div>
+    <div class="card">
+        <p-chart style="width:50%" type="doughnut" [data]="chartDataAirQuality" [options]="optionsAir" height="350"></p-chart>
+
+        <div class="table">
+            <p-table [columns]="dataColumnsAirQuality" [value]="dataAirQuality"[tableStyle]="{ 'min-width': '20rem' }">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        @for (col of columns; track col) {
+                          <th>{{ col }}</th>  
+                        }
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <td> {{ rowData['air_quality'] }}</td>
+                        <td> {{ rowData['timestamp'] }}</td>
+    
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        
+    </div>
+</main>

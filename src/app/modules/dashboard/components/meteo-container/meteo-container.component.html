@@ -1,0 +1,21 @@
+<main>
+    <div class="card">
+        <p-chart class="chart" type="line" [data]="chartDataPressure" [options]="options" height="350"></p-chart>
+
+        <div class="operations">
+            <span>Promedio: {{averages.pressure | number:'1.2-2'}} hPa</span>
+            <span>Desviación estándar: {{deviation.pressure | number:'1.2-2'}}</span>
+            <span>Tendencia: {{trend.pressure | number:'1.2-2'}}</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <p-chart class="chart" type="line" [data]="chartDataWind" [options]="options" height="350"></p-chart>
+
+        <div class="operations">
+            <span>Promedio: {{averages.wind_speed | number:'1.2-2'}} m/s</span>
+            <span>Desviación estándar: {{deviation.wind_speed | number:'1.2-2'}}</span>
+            <span>Tendencia: {{trend.wind_speed | number:'1.2-2'}}</span>
+        </div>
+    </div>
+</main>
